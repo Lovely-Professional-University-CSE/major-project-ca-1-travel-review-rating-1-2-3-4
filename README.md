@@ -9,7 +9,7 @@ iv)Matplotlib
 v)Nltk
 
 Taking a quick look at the data it became clear that were some basic issues that needed to fixed before starting. I noticed that some reviews had a '0' rating and some reviews had a rating above '5', I filtered these records out of the dataset to start and did a bit more cleaning here.
-#############################
+
                                                         INTRODUCTION
 In this project we are collecting data in which will classify the data into parts positive review and negative review we will say the positive review as class zero and negative review as class 1 by classify the review we will have a set of data
 Now my having set of data will make another class which will add unnecessary word like "is am are their" which are not used for classifying the review
