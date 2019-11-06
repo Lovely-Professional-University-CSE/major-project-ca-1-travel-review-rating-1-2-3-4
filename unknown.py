@@ -1,5 +1,7 @@
+
 import pandas as pd
 from nltk.corpus import stopwords
+import emoji
 def popupmsg(msg):
     popup = tk.Tk()
     popup.wm_title("!")
@@ -134,6 +136,9 @@ class Toplevel1:
                 self.Message1_4.configure(text=ans)
             elif(i==0):
                 self.Message1_51.configure(text=ans)
+
+
+
         if(f!=0):
             self.Message1_7.configure(text=(sum(y)//f))
         else:
@@ -556,6 +561,10 @@ def destroy_Toplevel1m():
 class Toplevel1m:
 
     def last(self):
+        b=self.Entry1_2.get()
+        if(((b.find('@')==-1) or(b.find('.')==-1))and b!=''):
+            popupmsg("Please Enter Correct Email")
+
         a=self.Entry2.get()
         if(a!=''):
             root.destroy()
