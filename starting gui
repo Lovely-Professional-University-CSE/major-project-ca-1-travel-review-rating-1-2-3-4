@@ -1,0 +1,41 @@
+def main():
+    global first
+    first=Tk()
+    first.wm_attributes('-fullscreen','true')
+    first.title('Travel Review System')
+
+    
+
+    q2=Label(first,text="\t\t",bg="orange",width=80,height=100)
+    q2.place(x=0,y=0)
+    q2.configure(font=("Times New Roman",15,"bold"),foreground="white")
+
+    q3=Label(first,text="\t",bg="blue",width=80,height=100)
+    q3.place(x=800,y=0)
+    q3.configure(font=("Times New Roman",15,"bold"),foreground="white")
+    
+    q4=Label(first,text="TRAVEL  REVIEW",bg="black",width=80,height=3)
+    q4.place(x=0,y=0)
+    q4.configure(font=("Times New Roman",25,"bold"),foreground="white")
+    
+    exit = Button(first, justify=LEFT,bg="black")
+    ex = PhotoImage(file="icon.png")
+    exit.config(image=ex, width="30", height="30", bd=0, command=first.destroy,activebackground="black")
+    exit.place(x=1470,y=20)
+
+    fdb= Button(first, justify=LEFT,bg="black")
+    fd = PhotoImage(file="feedback.png")
+    fdb.config(image=fd, width="270", height="100", bd=0, command=feedback1)
+    fdb.place(x=660,y=400)
+
+    ab= Button(first, justify=LEFT,bg="blue")
+    abt = PhotoImage(file="info.png")
+    ab.config(image=abt, width="150", height="150", bd=0, command=info1)
+    ab.place(x=1350,y=600)
+    
+    dv = Button(first, justify=LEFT)
+    pic3 = PhotoImage(file="develop.png")
+    dv.config(image=pic3, width="150", height="150", bd=0,bg="orange",activebackground="orange",command=developer)
+    dv.place(x=50, y=600)
+
+    first.mainloop()
