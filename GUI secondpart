@@ -1,0 +1,40 @@
+def developer():
+    first.destroy()
+    global dev
+    dev=Tk()
+    dev.wm_attributes('-fullscreen','true')
+
+    q2=Label(dev,text="\t\t",bg="orange",width=80,height=100)
+    q2.place(x=0,y=0)
+    q2.configure(font=("Times New Roman",15,"bold"),foreground="white")
+
+    q3=Label(dev,text="\t",bg="blue",width=80,height=100)
+    q3.place(x=800,y=0)
+    q3.configure(font=("Times New Roman",15,"bold"),foreground="white")
+    
+    back1 = PhotoImage(file="back.png")
+    B1 = Button(dev, image=back1,bd=0,relief="flat",bg="orange",activebackground="orange",command=dev_des)
+    B1.place(x=20, y=80)
+    back2 = PhotoImage(file="right.png")
+    B2 = Button(dev, image=back2,bd=0,relief="flat",bg="orange",activebackground="orange",command=developer1)
+    B2.place(x=20, y=250)
+    Label(dev,relief="solid",width=162,height=48,bg="black").place(x=200,y=30)
+    Label(dev, relief="solid", width=160, height=47).place(x=205, y=38)
+    Label(dev, relief="solid", width=157, height=22).place(x=215, y=48)
+    me=PhotoImage(file="resizeme1.png")
+    me1= PhotoImage(file="me2.png")
+    Label(dev,image=me,relief="solid", width=250, height=300).place(x=225, y=57)
+    Label(dev, relief="solid", width=157, height=22).place(x=215, y=400)
+    Label(dev,image=me1, relief="solid", width=250, height=300).place(x=225, y=409)
+    ANKIT='''Name: Ankit
+
+E mail: ankitdokania47@gmail.com'''
+    Satya='''Name: Satya Sai Dirisala
+        
+E mail: satyasai272@gmail.com'''
+    Label(dev,justify=LEFT,text=ANKIT, relief="flat", width=34, height=10,font=("Times New Roman", 20)).place(x=500, y=57)
+    Label(dev, justify=LEFT, text=Satya, relief="flat", width=30, height=10, font=("Times New Roman", 20)).place(x=500, y=409)
+    dev.mainloop()
+def dev_des():
+    dev.destroy()
+    main()
