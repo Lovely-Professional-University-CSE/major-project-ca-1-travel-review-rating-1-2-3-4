@@ -1,0 +1,55 @@
+def feedback():
+    global second
+    second=Tk()
+    second.wm_attributes('-fullscreen','true')
+    second.title('Travel Review System')
+
+    
+
+    q2=Label(second,text="\t\t",bg="orange",width=80,height=100)
+    q2.place(x=0,y=0)
+    q2.configure(font=("Times New Roman",15,"bold"),foreground="white")
+
+    q3=Label(second,text="\t",bg="blue",width=80,height=100)
+    q3.place(x=800,y=0)
+    q3.configure(font=("Times New Roman",15,"bold"),foreground="white")
+    
+    q4=Label(second,text="FEED BACK",bg="black",width=130,height=4)
+    q4.place(x=0,y=0)
+    q4.configure(font=("Times New Roman",15,"bold"),foreground="white")
+    
+    exit = Button(second, justify=LEFT,bg="black")
+    ex = PhotoImage(file="icon.png")
+    exit.config(image=ex, width="30", height="30", bd=0, command=second.destroy,activebackground="black")
+    exit.place(x=1470,y=20)
+    
+    e1=Entry(second,bd=5)
+    e1.place(x=950,y=300,width=500,height=100)
+    
+    b=Button(second,justify = LEFT)
+    photo=PhotoImage(file="submit.png")
+    b.config(image=photo,width="180",height="40",bd=0,activebackground="blue",command=message)
+    b.place(x=1050,y=500)
+    def help():
+        help1='''Please comment about the
+travelling on the right side
+and press the submit button 
+'''
+
+        lb=Label(second, bg="black",height="500",width="60")
+        lb.place(x=170,y=95)
+        lb1=Label(second,text=help1,height="20",width="33",justify=LEFT,fg="white",font=("Verdana", 14), bg="black")
+        lb1.place(x=175,y=100)
+        def lb_dest():
+            lb.destroy()
+            lb1.destroy()
+            exit1.destroy()
+
+        exit1 = Button(second,text="X",fg="white",font=(20),justify=CENTER, bg="red",bd=0, activebackground="red",command=lb_dest,height="1",width="2",relief="flat")
+        exit1.place(x=550, y=115)
+    hp = Button(second, justify=LEFT, bg="orange", activebackground="orange",command=help)
+    pic1 = PhotoImage(file="help1.png")
+    hp.config(image=pic1, width="130", height="130", bd=0)
+    hp.place(x=20, y=280)
+
+    second.mainloop()
