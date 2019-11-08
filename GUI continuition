@@ -1,0 +1,33 @@
+def developer1():
+    dev.destroy()
+    global dev1
+    dev1=Tk()
+    dev1.wm_attributes('-fullscreen','true')
+
+    q2=Label(dev1,text="\t\t",bg="orange",width=80,height=100)
+    q2.place(x=0,y=0)
+    q2.configure(font=("Times New Roman",15,"bold"),foreground="white")
+
+    q3=Label(dev1,text="\t",bg="blue",width=80,height=100)
+    q3.place(x=800,y=0)
+    q3.configure(font=("Times New Roman",15,"bold"),foreground="white")
+    
+    back = PhotoImage(file="back.png")
+    B1 = Button(dev1, image=back,bd=0,relief="flat",bg="orange",activebackground="orange",command=dev_des1)
+    B1.place(x=20, y=80)
+    Label(dev1,relief="solid",width=162,height=48,bg="black").place(x=200,y=30)
+    Label(dev1, relief="solid", width=160, height=47).place(x=205, y=38)
+    Label(dev1, relief="solid", width=157, height=22).place(x=215, y=48)
+    me=PhotoImage(file="reresizeme3.png")
+    me1= PhotoImage(file="reresizeme4.png")
+    Label(dev1,image=me,relief="solid", width=250, height=300).place(x=225, y=57)
+    Label(dev1, relief="solid", width=157, height=22).place(x=215, y=400)
+    Label(dev1,image=me1, relief="solid", width=250, height=300).place(x=225, y=409)
+    YASH='''Name:Yash'''
+    Pulkit='''Name:Pulkit'''
+    Label(dev1,justify=LEFT,text=YASH, relief="flat", width=34, height=10,font=("Times New Roman", 20)).place(x=500, y=57)
+    Label(dev1, justify=LEFT, text=Pulkit, relief="flat", width=30, height=10, font=("Times New Roman", 20)).place(x=500, y=409)
+    dev1.mainloop()
+def dev_des1():
+    dev1.destroy()
+    main()
